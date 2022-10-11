@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5C Leftist Calendar</title>
+    <link rel="stylesheet" href="./main.min.css">
+    <script src="./main.min.js"></script>
+    <style>
+        body {
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="calendar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById("calendar");
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: { center: "listYear,dayGridMonth" },
+                googleCalendarApiKey: "AIzaSyAgcUevYhjvabX3wILzDpUQsPBMWKzHpAQ",
+                initialView: "listYear",
+                events: {
+                    googleCalendarId: "151e454f750ccfd085666d2fdc5cb7c7bb32f0826851a3b3bc2bca496d323c03@group.calendar.google.com"
+                },
+                height: "100vh",
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
