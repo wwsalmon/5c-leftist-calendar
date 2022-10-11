@@ -30,6 +30,11 @@
                     googleCalendarId: "151e454f750ccfd085666d2fdc5cb7c7bb32f0826851a3b3bc2bca496d323c03@group.calendar.google.com"
                 },
                 height: "100vh",
+                eventClick: function(arg) {
+                    window.open(arg.event.url, "_blank");
+
+                    arg.jsEvent.preventDefault();
+                },
             });
 
             calendar.render();
